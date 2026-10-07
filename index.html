@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KivuPlay — Okul öncesi çocuklar için eğitici oyunlar</title>
+  <meta name="description" content="KivuPlay, 2–6 yaş arası çocuklar için güvenli, renkli ve öğretici mobil oyunlar tasarlayan bir oyun stüdyosudur. Oyunlarımız çok yakında App Store ve Google Play'de.">
+  <meta name="theme-color" content="#C9ECFF">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KivuPlay">
+  <meta property="og:title" content="KivuPlay — Küçük eller için kocaman maceralar">
+  <meta property="og:description" content="2–6 yaş arası çocuklar için güvenli, renkli ve öğretici mobil oyunlar.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preload" href="assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KivuPlay",
+    "description": "Okul öncesi çocuklar için eğitici mobil oyunlar.",
+    "email": "contact@kivuplay.com",
+    "logo": "assets/img/favicon.svg"
+  }
+  </script>
+</head>
+<body data-page="home">
+
+<a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
+
+<!-- ============ SVG SPRITE ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gKivu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFA552"/>
+      <stop offset="1" stop-color="#FF5E7E"/>
+    </linearGradient>
+    <linearGradient id="gLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFA552"/>
+      <stop offset="1" stop-color="#FF5E7E"/>
+    </linearGradient>
+  </defs>
+
+  <symbol id="i-apple" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+  </symbol>
+
+  <symbol id="i-play" viewBox="0 0 24 24">
+    <g stroke-linejoin="round" stroke-width="1.2">
+      <polygon points="3.6,1.8 13.4,12 3.6,22.2" fill="#00B4FF" stroke="#00B4FF"/>
+      <polygon points="3.6,1.8 16.3,9.2 13.4,12" fill="#00D46A" stroke="#00D46A"/>
+      <polygon points="3.6,22.2 13.4,12 16.3,14.8" fill="#FF3D49" stroke="#FF3D49"/>
+      <polygon points="16.3,9.2 21,12 16.3,14.8 13.4,12" fill="#FFC107" stroke="#FFC107"/>
+    </g>
+  </symbol>
+
+  <symbol id="i-star" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/>
+  </symbol>
+
+  <symbol id="i-spark" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 0c.8 6.4 3.6 9.6 12 12-8.4 2.4-11.2 5.6-12 12-.8-6.4-3.6-9.6-12-12 8.4-2.4 11.2-5.6 12-12z"/>
+  </symbol>
+
+  <symbol id="i-check" viewBox="0 0 24 24">
+    <path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="logo-mark" viewBox="0 0 48 48">
+    <path d="M24.5 11C24.5 7 23.5 5 25.5 2.5" fill="none" stroke="#21B26F" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M24.8 6C21 2 16.6 3 16 5C18.6 7.8 22.4 8 24.8 6Z" fill="#3DD68C"/>
+    <path d="M25.4 4.6C28.4 0.6 33.2 1.2 33.8 3.4C31.4 6 28.2 6.4 25.4 4.6Z" fill="#2ED3A0"/>
+    <rect x="3" y="9.5" width="42" height="36.5" rx="15" fill="url(#gLogo)"/>
+    <circle cx="17" cy="25" r="6.2" fill="#fff"/>
+    <circle cx="31" cy="25" r="6.2" fill="#fff"/>
+    <circle cx="18" cy="26" r="3.3" fill="#2A2350"/>
+    <circle cx="32" cy="26" r="3.3" fill="#2A2350"/>
+    <circle cx="16.8" cy="24.6" r="1.2" fill="#fff"/>
+    <circle cx="30.8" cy="24.6" r="1.2" fill="#fff"/>
+    <ellipse cx="10.5" cy="33" rx="3.2" ry="2" fill="#FF6FA8" opacity=".6"/>
+    <ellipse cx="37.5" cy="33" rx="3.2" ry="2" fill="#FF6FA8" opacity=".6"/>
+    <path d="M19.5 34.2Q24 39 28.5 34.2" fill="none" stroke="#2A2350" stroke-width="2.6" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Kivu, static (used in CTA) -->
+  <symbol id="kivu-static" viewBox="0 0 400 400">
+    <path d="M84 240Q46 232 38 196" fill="none" stroke="#FF7A62" stroke-width="30" stroke-linecap="round"/>
+    <path d="M316 240Q356 228 364 192" fill="none" stroke="#FF7A62" stroke-width="30" stroke-linecap="round"/>
+    <path d="M200 78C292 78 338 152 338 238C338 318 282 356 200 356C118 356 62 318 62 238C62 152 108 78 200 78Z" fill="url(#gKivu)"/>
+    <ellipse cx="200" cy="292" rx="84" ry="50" fill="#FFE1CF" opacity=".5"/>
+    <ellipse cx="128" cy="140" rx="22" ry="12" fill="#fff" opacity=".35" transform="rotate(-35 128 140)"/>
+    <path d="M200 82C200 62 196 48 204 32" fill="none" stroke="#21B26F" stroke-width="8" stroke-linecap="round"/>
+    <path d="M201 50C182 28 160 32 156 44C170 58 190 58 201 50Z" fill="#3DD68C"/>
+    <path d="M203 40C218 16 244 18 250 30C238 44 220 46 203 40Z" fill="#2ED3A0"/>
+    <ellipse cx="156" cy="200" rx="36" ry="40" fill="#fff"/>
+    <ellipse cx="244" cy="200" rx="36" ry="40" fill="#fff"/>
+    <circle cx="160" cy="190" r="20" fill="#2A2350"/>
+    <circle cx="248" cy="190" r="20" fill="#2A2350"/>
+    <circle cx="153" cy="182" r="7" fill="#fff"/>
+    <circle cx="241" cy="182" r="7" fill="#fff"/>
+    <ellipse cx="114" cy="252" rx="20" ry="12" fill="#FF6FA8" opacity=".55"/>
+    <ellipse cx="286" cy="252" rx="20" ry="12" fill="#FF6FA8" opacity=".55"/>
+    <path d="M172 250Q200 290 228 250Q200 260 172 250Z" fill="#2A2350" stroke="#2A2350" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M187 263Q200 276 213 263Q200 257 187 263Z" fill="#FF7A9A"/>
+  </symbol>
+
+  <!-- Kivu, sleeping (footer) -->
+  <symbol id="kivu-sleep" viewBox="0 0 400 400">
+    <ellipse cx="156" cy="356" rx="36" ry="17" fill="#EF4F6F"/>
+    <ellipse cx="244" cy="356" rx="36" ry="17" fill="#EF4F6F"/>
+    <path d="M200 78C292 78 338 152 338 238C338 318 282 356 200 356C118 356 62 318 62 238C62 152 108 78 200 78Z" fill="url(#gKivu)"/>
+    <ellipse cx="200" cy="292" rx="84" ry="50" fill="#FFE1CF" opacity=".5"/>
+    <path d="M200 82C200 66 190 56 178 50" fill="none" stroke="#21B26F" stroke-width="8" stroke-linecap="round"/>
+    <path d="M182 54C160 44 142 54 142 66C158 74 176 68 182 54Z" fill="#3DD68C"/>
+    <path d="M128 206Q156 226 184 206" fill="none" stroke="#2A2350" stroke-width="9" stroke-linecap="round"/>
+    <path d="M216 206Q244 226 272 206" fill="none" stroke="#2A2350" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="114" cy="248" rx="20" ry="12" fill="#FF6FA8" opacity=".55"/>
+    <ellipse cx="286" cy="248" rx="20" ry="12" fill="#FF6FA8" opacity=".55"/>
+    <ellipse cx="200" cy="262" rx="11" ry="9" fill="#2A2350"/>
+    <path d="M96 268Q120 300 160 300" fill="none" stroke="#FF7A62" stroke-width="28" stroke-linecap="round"/>
+    <path d="M304 268Q280 300 240 300" fill="none" stroke="#FF7A62" stroke-width="28" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="top">
+  <div class="wrap">
+    <div class="header__bar">
+      <a class="logo" href="#top" aria-label="KivuPlay">
+        <svg class="logo__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+        <span class="logo__word"><b>kivu</b><i>play</i></span>
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Ana menü">
+        <a href="#oyunlar" data-i18n="nav.games">Oyunlar</a>
+        <a href="#oyun-alani" data-i18n="nav.play">Oyun Alanı</a>
+        <a href="#ebeveynler" data-i18n="nav.parents">Ebeveynler</a>
+        <a href="#destek" data-i18n="nav.support">Destek</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Dil / Language">
+          <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn--sm header__cta" href="#indir" data-i18n="nav.soon">Çok yakında</a>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü" data-i18n-label="nav.menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="sky" aria-hidden="true">
+    <span class="cloud" style="--y:14%;--w:180px;--t:80s;--dl:-10s;--x0:8vw"></span>
+    <span class="cloud" style="--y:30%;--w:120px;--t:62s;--dl:-40s;--x0:46vw"></span>
+    <span class="cloud" style="--y:8%;--w:140px;--t:95s;--dl:-70s;--x0:70vw"></span>
+    <span class="cloud" style="--y:52%;--w:100px;--t:70s;--dl:-25s;--x0:30vw"></span>
+    <svg class="twinkle" style="top:18%;left:44%;--s:22px;--c:#FFC93C"><use href="#i-spark"/></svg>
+    <svg class="twinkle" style="top:70%;left:6%;--s:16px;--c:#9B5DE5;--dl:.8s"><use href="#i-spark"/></svg>
+    <svg class="twinkle" style="top:12%;left:88%;--s:20px;--c:#FF6B6B;--dl:1.4s"><use href="#i-spark"/></svg>
+    <svg class="twinkle" style="top:60%;left:50%;--s:14px;--c:#fff;--dl:.4s"><use href="#i-spark"/></svg>
+  </div>
+
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <span class="pill reveal">
+        <span class="pill__dot"><svg><use href="#i-star"/></svg></span>
+        <span data-i18n="hero.pill">Okul öncesi oyun stüdyosu</span>
+      </span>
+
+      <h1 class="hero__title reveal" style="--rd:.1s" data-i18n="hero.title">Küçük eller için <span class="hl">kocaman</span> maceralar</h1>
+
+      <p class="hero__lead reveal" style="--rd:.2s" data-i18n="hero.lead">KivuPlay, 2–6 yaş arası çocuklar için güvenli, renkli ve öğretici mobil oyunlar tasarlar. Her dokunuş bir keşif, her oyun kocaman bir gülümseme.</p>
+
+      <!-- Oyunlar yayınlanınca: <span class="btn store store--soon"> yerine <a class="btn store" href="MAĞAZA_LİNKİ"> kullanın -->
+      <div class="stores reveal" style="--rd:.3s">
+        <span class="btn store store--soon">
+          <svg aria-hidden="true"><use href="#i-apple"/></svg>
+          <span><small data-i18n="store.soon">Çok yakında</small><strong>App Store</strong></span>
+          <svg class="store__spark" aria-hidden="true"><use href="#i-spark"/></svg>
+        </span>
+        <span class="btn store store--soon">
+          <svg aria-hidden="true"><use href="#i-play"/></svg>
+          <span><small data-i18n="store.soon">Çok yakında</small><strong>Google Play</strong></span>
+          <svg class="store__spark" aria-hidden="true"><use href="#i-spark"/></svg>
+        </span>
+      </div>
+
+      <ul class="hero__chips reveal" style="--rd:.4s">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.chip1">2–6 yaş</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>iPhone, iPad &amp; Android</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.chip3">Önce güvenlik</span></li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <div class="stage__rays" aria-hidden="true"></div>
+      <div class="stage__sun" aria-hidden="true"></div>
+      <div class="stage__ring" aria-hidden="true"></div>
+      <div class="stage__ring stage__ring--2" aria-hidden="true"></div>
+
+      <div class="toy t1" data-depth="26" aria-hidden="true"><div class="toy__in" style="--c:#FF6B6B;--r:-12deg;--s:72px">A</div></div>
+      <div class="toy t2" data-depth="-20" aria-hidden="true"><div class="toy__in" style="--c:#3AB8F5;--r:10deg;--s:64px;--dl:-1.5s">3</div></div>
+      <div class="toy t3" data-depth="18" aria-hidden="true">
+        <div class="toy__in toy__in--shape" style="--s:70px;--dl:-2.5s;--r:12deg"><svg viewBox="0 0 24 24"><path fill="#FFC93C" stroke="#FFC93C" stroke-width="2" stroke-linejoin="round" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/></svg></div>
+      </div>
+      <div class="toy t4" data-depth="-28" aria-hidden="true">
+        <div class="toy__in toy__in--shape" style="--s:62px;--dl:-1s;--r:-8deg"><svg viewBox="0 0 24 24"><path fill="#2ED3A0" stroke="#2ED3A0" stroke-width="3" stroke-linejoin="round" d="M12 3L22 20H2Z"/></svg></div>
+      </div>
+      <div class="toy t5" data-depth="22" aria-hidden="true">
+        <div class="toy__in toy__in--shape" style="--s:58px;--dl:-3s;--r:-10deg"><svg viewBox="0 0 24 24"><path fill="#F15BB5" d="M12 21.5C5 16.8 2 13 2 9.2 2 6.2 4.4 4 7.2 4c2 0 3.7 1.1 4.8 2.7C13.1 5.1 14.8 4 16.8 4 19.6 4 22 6.2 22 9.2c0 3.8-3 7.6-10 12.3z"/></svg></div>
+      </div>
+      <div class="toy t6" data-depth="14" aria-hidden="true"><div class="toy__in toy__in--ball" style="--c:#9B5DE5;--s:40px;--dl:-2s"></div></div>
+
+      <p class="speech" aria-live="polite" data-i18n="hero.speech">Merhaba, ben Kivu!</p>
+
+      <svg id="kivu" class="kivu" viewBox="0 0 400 400" role="button" tabindex="0" aria-label="Kivu ile oyna" data-i18n-label="hero.kivu">
+        <ellipse class="kivu__shadow" cx="200" cy="382" rx="118" ry="13" fill="#2A2350" opacity=".12"/>
+        <g class="kivu__body">
+          <path d="M84 240Q46 232 38 196" fill="none" stroke="#FF7A62" stroke-width="30" stroke-linecap="round"/>
+          <g class="kivu__wave"><path d="M316 240Q356 228 364 192" fill="none" stroke="#FF7A62" stroke-width="30" stroke-linecap="round"/></g>
+          <ellipse cx="156" cy="356" rx="36" ry="17" fill="#EF4F6F"/>
+          <ellipse cx="244" cy="356" rx="36" ry="17" fill="#EF4F6F"/>
+          <path d="M200 78C292 78 338 152 338 238C338 318 282 356 200 356C118 356 62 318 62 238C62 152 108 78 200 78Z" fill="url(#gKivu)"/>
+          <ellipse cx="200" cy="292" rx="84" ry="50" fill="#FFE1CF" opacity=".5"/>
+          <ellipse cx="128" cy="140" rx="22" ry="12" fill="#fff" opacity=".35" transform="rotate(-35 128 140)"/>
+          <g class="kivu__sprout">
+            <path d="M200 82C200 62 196 48 204 32" fill="none" stroke="#21B26F" stroke-width="8" stroke-linecap="round"/>
+            <path d="M201 50C182 28 160 32 156 44C170 58 190 58 201 50Z" fill="#3DD68C"/>
+            <path d="M203 40C218 16 244 18 250 30C238 44 220 46 203 40Z" fill="#2ED3A0"/>
+          </g>
+          <g transform="translate(156 200)">
+            <g class="kivu__eye">
+              <ellipse rx="36" ry="40" fill="#fff"/>
+              <g class="kivu__pupil"><circle r="20" fill="#2A2350"/><circle cx="-7" cy="-8" r="7" fill="#fff"/><circle cx="6" cy="7" r="3" fill="#fff"/></g>
+            </g>
+          </g>
+          <g transform="translate(244 200)">
+            <g class="kivu__eye">
+              <ellipse rx="36" ry="40" fill="#fff"/>
+              <g class="kivu__pupil"><circle r="20" fill="#2A2350"/><circle cx="-7" cy="-8" r="7" fill="#fff"/><circle cx="6" cy="7" r="3" fill="#fff"/></g>
+            </g>
+          </g>
+          <ellipse cx="114" cy="252" rx="20" ry="12" fill="#FF6FA8" opacity=".55"/>
+          <ellipse cx="286" cy="252" rx="20" ry="12" fill="#FF6FA8" opacity=".55"/>
+          <path d="M172 250Q200 290 228 250Q200 260 172 250Z" fill="#2A2350" stroke="#2A2350" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M187 263Q200 276 213 263Q200 257 187 263Z" fill="#FF7A9A"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <svg class="hero__hills" viewBox="0 0 1440 230" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 120C180 60 360 62 540 112S900 172 1080 112 1320 52 1440 92V230H0Z" fill="#BFF0D9"/>
+    <path d="M0 168C220 116 420 126 620 156S1000 196 1200 156 1380 126 1440 136V230H0Z" fill="#8FE3B8"/>
+    <g fill="#fff" opacity=".9">
+      <circle cx="260" cy="150" r="5"/><circle cx="300" cy="144" r="4"/><circle cx="880" cy="170" r="5"/><circle cx="1240" cy="150" r="4"/><circle cx="1300" cy="146" r="5"/>
+    </g>
+    <g fill="#FFC93C">
+      <circle cx="280" cy="156" r="4"/><circle cx="900" cy="176" r="4"/><circle cx="1270" cy="156" r="4"/>
+    </g>
+    <path d="M0 204C240 176 480 182 720 198S1200 214 1440 190V230H0Z" fill="#FFF7EC"/>
+  </svg>
+</section>
+
+<!-- ============ RIBBONS ============ -->
+<div class="ribbons" aria-hidden="true">
+  <div class="ribbon ribbon--back">
+    <div class="ribbon__track">
+      <span data-i18n="rb.imagine">Hayal et</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.grow">Büyü</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.share">Paylaş</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.wonder">Merak et</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.imagine">Hayal et</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.grow">Büyü</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.share">Paylaş</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.wonder">Merak et</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.imagine">Hayal et</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.grow">Büyü</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.share">Paylaş</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.wonder">Merak et</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.imagine">Hayal et</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.grow">Büyü</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.share">Paylaş</span><svg><use href="#i-spark"/></svg>
+      <span data-i18n="rb.wonder">Merak et</span><svg><use href="#i-spark"/></svg>
+    </div>
+  </div>
+  <div class="ribbon ribbon--front">
+    <div class="ribbon__track">
+      <span data-i18n="rb.play">Oyna</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.learn">Öğren</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.explore">Keşfet</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.laugh">Gül</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.play">Oyna</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.learn">Öğren</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.explore">Keşfet</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.laugh">Gül</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.play">Oyna</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.learn">Öğren</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.explore">Keşfet</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.laugh">Gül</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.play">Oyna</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.learn">Öğren</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.explore">Keşfet</span><svg><use href="#i-star"/></svg>
+      <span data-i18n="rb.laugh">Gül</span><svg><use href="#i-star"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============ WHY ============ -->
+<section class="section" id="neden">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow" data-i18n="why.eyebrow">Neden KivuPlay?</span>
+      <h2 class="h2" data-i18n="why.title">Oyun, büyümenin en neşeli hâli</h2>
+      <p data-i18n="why.lead">Çocukların sonsuz merakını, ebeveynlerin içini rahatlatan bir özenle buluşturuyoruz.</p>
+    </header>
+
+    <div class="features" data-stagger>
+      <article class="feature reveal" style="--c:#FF6B6B">
+        <div class="feature__icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M24 4L40 10V22C40 32 33 40 24 44C15 40 8 32 8 22V10Z" fill="#fff"/>
+            <path class="accent" d="M24 32C18 28 15 25 15 21.5 15 19 17 17 19.5 17 21.5 17 23 18.2 24 19.8 25 18.2 26.5 17 28.5 17 31 17 33 19 33 21.5 33 25 30 28 24 32Z"/>
+          </svg>
+        </div>
+        <h3 data-i18n="why.f1.t">Güvenli oyun alanı</h3>
+        <p data-i18n="why.f1.p">Satın almalar, ayarlar ve dış bağlantılar ebeveyn kapısının arkasında. Minikler yalnızca oyuna odaklanır.</p>
+      </article>
+
+      <article class="feature reveal" style="--c:#FFB020">
+        <div class="feature__icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="3.5" y="24.5" width="19.5" height="19.5" rx="5" fill="#fff"/>
+            <rect x="25" y="24.5" width="19.5" height="19.5" rx="5" fill="#fff"/>
+            <rect x="14.25" y="3.5" width="19.5" height="19.5" rx="5" fill="#fff"/>
+            <g class="accent" font-family="Fredoka, sans-serif" font-weight="700" font-size="14" text-anchor="middle">
+              <text x="13.25" y="39.2">A</text><text x="34.75" y="39.2">B</text><text x="24" y="18.2">C</text>
+            </g>
+          </svg>
+        </div>
+        <h3 data-i18n="why.f2.t">Oynayarak öğrenme</h3>
+        <p data-i18n="why.f2.p">Renkler, şekiller, sayılar ve harfler; eğlenceli mini oyunların içine gizlenmiş minik dersler.</p>
+      </article>
+
+      <article class="feature reveal" style="--c:#2ED3A0">
+        <div class="feature__icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <circle class="ripple" cx="24" cy="24" r="21" fill="#fff" opacity=".6"/>
+            <circle class="ripple ripple--2" cx="24" cy="24" r="21" fill="#fff" opacity=".6"/>
+            <circle cx="24" cy="24" r="10" fill="#fff"/>
+            <circle class="accent" cx="24" cy="24" r="4.5"/>
+          </svg>
+        </div>
+        <h3 data-i18n="why.f3.t">Minik ellere göre</h3>
+        <p data-i18n="why.f3.p">Kocaman butonlar, basit dokunuşlar ve okuma gerektirmeyen, sezgisel arayüzler.</p>
+      </article>
+
+      <article class="feature reveal" style="--c:#9B5DE5">
+        <div class="feature__icon">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M24 42C10 33 5 25 5 18 5 11.5 10 7 16 7 19.8 7 22.6 9 24 11.8 25.4 9 28.2 7 32 7 38 7 43 11.5 43 18 43 25 38 33 24 42Z" fill="#fff"/>
+            <path d="M12 18.5C12 15 14.5 12.5 18 12.5" fill="none" stroke="#9B5DE5" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+          </svg>
+        </div>
+        <h3 data-i18n="why.f4.t">Sevgiyle tasarlandı</h3>
+        <p data-i18n="why.f4.p">Her karakter, her ses ve her animasyon, çocukların dünyası düşünülerek özenle hazırlanır.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GAMES ============ -->
+<section class="section band band--lilac" id="oyunlar">
+  <div class="wave wave--top" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 48C160 16 320 8 480 32S800 80 960 56 1280 8 1440 32V80H0Z" fill="currentColor"/></svg></div>
+
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow" style="--e-bg:#E2D6FF;--e-c:#7A3FC4" data-i18n="games.eyebrow">Oyunlarımız</span>
+      <h2 class="h2" data-i18n="games.title">Minik kahramanlar için kocaman eğlence</h2>
+      <p data-i18n="games.lead">Üzerinde sevgiyle çalıştığımız, her biri farklı bir beceriye odaklanan rengârenk dünyalar. Çok yakında!</p>
+    </header>
+
+    <!-- Örnek oyunlar: kendi oyunlarınızın adı, görseli ve mağaza linkleriyle değiştirin. -->
+    <div class="games" data-stagger>
+
+      <article class="game reveal" data-tilt>
+        <div class="game__cover">
+          <span class="sticker" data-i18n="g.soon">Yakında!</span>
+          <svg viewBox="0 0 320 200" aria-hidden="true">
+            <defs><linearGradient id="cv1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9E8F"/><stop offset="1" stop-color="#FF6B6B"/></linearGradient></defs>
+            <rect width="320" height="200" fill="url(#cv1)"/>
+            <circle cx="30" cy="20" r="70" fill="#fff" opacity=".12"/>
+            <circle cx="300" cy="200" r="90" fill="#fff" opacity=".1"/>
+            <g fill="#fff" opacity=".85">
+              <rect x="40" y="150" width="8" height="8" rx="2" transform="rotate(20 44 154)"/>
+              <rect x="270" y="40" width="8" height="8" rx="2" transform="rotate(-25 274 44)"/>
+              <circle cx="130" cy="30" r="4"/><circle cx="210" cy="165" r="4"/>
+            </g>
+            <g class="cv-float" style="--dl:-1s">
+              <path d="M92 121Q84 150 98 200" stroke="#fff" stroke-width="2" fill="none" opacity=".8"/>
+              <ellipse cx="92" cy="85" rx="30" ry="36" fill="#FFD23F"/>
+              <path d="M86 122H98L92 114Z" fill="#E0B000"/>
+              <ellipse cx="81" cy="71" rx="7" ry="11" fill="#fff" opacity=".6" transform="rotate(-20 81 71)"/>
+            </g>
+            <g class="cv-float" style="--dl:-2.6s">
+              <path d="M165 116Q176 160 160 200" stroke="#fff" stroke-width="2" fill="none" opacity=".8"/>
+              <ellipse cx="165" cy="72" rx="36" ry="43" fill="#3AB8F5"/>
+              <path d="M158 117H172L165 108Z" fill="#1B8FCB"/>
+              <ellipse cx="151" cy="55" rx="8" ry="13" fill="#fff" opacity=".6" transform="rotate(-20 151 55)"/>
+            </g>
+            <g class="cv-float" style="--dl:-.4s">
+              <path d="M236 131Q228 165 240 200" stroke="#fff" stroke-width="2" fill="none" opacity=".8"/>
+              <ellipse cx="236" cy="96" rx="28" ry="34" fill="#2ED3A0"/>
+              <path d="M230 131H242L236 123Z" fill="#14A57A"/>
+              <ellipse cx="226" cy="83" rx="6" ry="10" fill="#fff" opacity=".6" transform="rotate(-20 226 83)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="game__body">
+          <div class="game__meta"><span class="age" data-i18n="g1.age">2–4 yaş</span></div>
+          <h3 data-i18n="g1.t">Balon Partisi</h3>
+          <p data-i18n="g1.p">Rengârenk balonları patlat, renkleri ve sesleri keşfet. Her dokunuşta yeni bir sürpriz!</p>
+          <ul class="tags"><li data-i18n="tag.colors">Renkler</li><li data-i18n="tag.hand">El-göz koordinasyonu</li></ul>
+          <span class="soon-note"><svg aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="g.soonNote">Çok yakında</span><span class="soon-note__stores" aria-label="App Store, Google Play"><svg aria-hidden="true"><use href="#i-apple"/></svg><svg aria-hidden="true"><use href="#i-play"/></svg></span></span>
+        </div>
+      </article>
+
+      <article class="game reveal" data-tilt>
+        <div class="game__cover">
+          <span class="sticker" data-i18n="g.soon">Yakında!</span>
+          <svg viewBox="0 0 320 200" aria-hidden="true">
+            <defs><linearGradient id="cv2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFEAFF"/><stop offset="1" stop-color="#EAFBFF"/></linearGradient></defs>
+            <rect width="320" height="200" fill="url(#cv2)"/>
+            <circle cx="268" cy="44" r="22" fill="#FFD23F"/>
+            <circle cx="268" cy="44" r="32" fill="#FFD23F" opacity=".25"/>
+            <g fill="#fff"><ellipse cx="70" cy="44" rx="30" ry="12"/><ellipse cx="84" cy="36" rx="16" ry="12"/><ellipse cx="60" cy="38" rx="12" ry="9"/></g>
+            <path d="M0 150Q80 116 160 138T320 128V200H0Z" fill="#7BD389"/>
+            <path d="M0 176Q100 158 200 172T320 166V200H0Z" fill="#5CC277"/>
+            <g fill="#fff"><circle cx="40" cy="160" r="4"/><circle cx="270" cy="150" r="4"/><circle cx="292" cy="176" r="4"/></g>
+            <g fill="#FF7AB6"><circle cx="54" cy="170" r="4"/><circle cx="252" cy="168" r="4"/></g>
+            <g class="cv-hop">
+              <path d="M150 168l-4 12M170 168l4 12" stroke="#FF9F1C" stroke-width="4" stroke-linecap="round"/>
+              <path d="M155 96Q156 82 162 92Q166 80 170 94" fill="none" stroke="#FFC81E" stroke-width="5" stroke-linecap="round"/>
+              <ellipse cx="160" cy="134" rx="40" ry="38" fill="#FFD93D"/>
+              <ellipse cx="128" cy="142" rx="11" ry="18" fill="#F7C21B" transform="rotate(-20 128 142)"/>
+              <ellipse cx="192" cy="142" rx="11" ry="18" fill="#F7C21B" transform="rotate(20 192 142)"/>
+              <circle cx="148" cy="124" r="5.5" fill="#2A2350"/><circle cx="172" cy="124" r="5.5" fill="#2A2350"/>
+              <circle cx="146.5" cy="122" r="1.8" fill="#fff"/><circle cx="170.5" cy="122" r="1.8" fill="#fff"/>
+              <path d="M153 134H167L160 144Z" fill="#FF9F1C" stroke="#FF9F1C" stroke-width="2" stroke-linejoin="round"/>
+              <ellipse cx="138" cy="138" rx="6" ry="4" fill="#FF8FB1" opacity=".7"/><ellipse cx="182" cy="138" rx="6" ry="4" fill="#FF8FB1" opacity=".7"/>
+            </g>
+          </svg>
+        </div>
+        <div class="game__body">
+          <div class="game__meta"><span class="age" data-i18n="g2.age">2–5 yaş</span></div>
+          <h3 data-i18n="g2.t">Minik Çiftlik</h3>
+          <p data-i18n="g2.p">Civcivler, kuzular ve inekler seni bekliyor! Hayvanları tanı, seslerini öğren.</p>
+          <ul class="tags"><li data-i18n="tag.animals">Hayvanlar</li><li data-i18n="tag.sounds">Sesler</li></ul>
+          <span class="soon-note"><svg aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="g.soonNote">Çok yakında</span><span class="soon-note__stores" aria-label="App Store, Google Play"><svg aria-hidden="true"><use href="#i-apple"/></svg><svg aria-hidden="true"><use href="#i-play"/></svg></span></span>
+        </div>
+      </article>
+
+      <article class="game reveal" data-tilt>
+        <div class="game__cover">
+          <span class="sticker" data-i18n="g.soon">Yakında!</span>
+          <svg viewBox="0 0 320 200" aria-hidden="true">
+            <defs><linearGradient id="cv3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8B4FF"/><stop offset="1" stop-color="#9B7BFF"/></linearGradient></defs>
+            <rect width="320" height="200" fill="url(#cv3)"/>
+            <circle cx="290" cy="20" r="60" fill="#fff" opacity=".12"/>
+            <g fill="#fff" opacity=".8"><circle cx="40" cy="40" r="3"/><circle cx="170" cy="24" r="3"/><circle cx="300" cy="120" r="3"/></g>
+            <path d="M0 170Q160 148 320 170V200H0Z" fill="#7BD389"/>
+            <g class="cv-sway" style="--dl:-.5s">
+              <path d="M70 172V112" stroke="#2E9E5B" stroke-width="5" stroke-linecap="round"/>
+              <ellipse cx="80" cy="146" rx="10" ry="5" fill="#46C06E" transform="rotate(-30 80 146)"/>
+              <circle cx="70" cy="98" r="22" fill="#FF6B6B"/><circle cx="70" cy="98" r="8" fill="#FFD23F"/>
+            </g>
+            <g class="cv-sway" style="--dl:-1.8s">
+              <path d="M130 172V88" stroke="#2E9E5B" stroke-width="5" stroke-linecap="round"/>
+              <ellipse cx="120" cy="134" rx="10" ry="5" fill="#46C06E" transform="rotate(30 120 134)"/>
+              <path d="M130 46L154 88H106Z" fill="#FFD23F" stroke="#FFD23F" stroke-width="6" stroke-linejoin="round"/>
+            </g>
+            <g class="cv-sway" style="--dl:-1s">
+              <path d="M195 172V112" stroke="#2E9E5B" stroke-width="5" stroke-linecap="round"/>
+              <ellipse cx="205" cy="150" rx="10" ry="5" fill="#46C06E" transform="rotate(-30 205 150)"/>
+              <rect x="175" y="72" width="40" height="40" rx="7" fill="#3AB8F5" transform="rotate(12 195 92)"/>
+            </g>
+            <g class="cv-sway" style="--dl:-2.4s">
+              <path d="M255 172V98" stroke="#2E9E5B" stroke-width="5" stroke-linecap="round"/>
+              <ellipse cx="245" cy="140" rx="10" ry="5" fill="#46C06E" transform="rotate(30 245 140)"/>
+              <polygon points="255,52 261.5,69.1 279.7,70 265.5,81.4 270.3,99 255,89 239.7,99 244.5,81.4 230.3,70 248.5,69.1" fill="#F15BB5" stroke="#F15BB5" stroke-width="4" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="game__body">
+          <div class="game__meta"><span class="age" data-i18n="g3.age">3–5 yaş</span></div>
+          <h3 data-i18n="g3.t">Şekil Bahçesi</h3>
+          <p data-i18n="g3.p">Daire, üçgen, kare… Şekilleri eşleştir, bahçeni rengârenk çiçeklerle doldur.</p>
+          <ul class="tags"><li data-i18n="tag.shapes">Şekiller</li><li data-i18n="tag.match">Eşleştirme</li></ul>
+          <span class="soon-note"><svg aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="g.soonNote">Çok yakında</span><span class="soon-note__stores" aria-label="App Store, Google Play"><svg aria-hidden="true"><use href="#i-apple"/></svg><svg aria-hidden="true"><use href="#i-play"/></svg></span></span>
+        </div>
+      </article>
+
+      <article class="game reveal" data-tilt>
+        <div class="game__cover">
+          <span class="sticker" data-i18n="g.soon">Yakında!</span>
+          <svg viewBox="0 0 320 200" aria-hidden="true">
+            <defs><linearGradient id="cv4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A3E6FF"/><stop offset="1" stop-color="#5CC8F5"/></linearGradient></defs>
+            <rect width="320" height="200" fill="url(#cv4)"/>
+            <g fill="#fff" opacity=".9"><ellipse cx="250" cy="34" rx="28" ry="10"/><ellipse cx="262" cy="27" rx="14" ry="10"/></g>
+            <path d="M0 150Q90 120 180 140T320 132V200H0Z" fill="#A7E8B9"/>
+            <rect y="170" width="320" height="30" fill="#7BD389"/>
+            <g fill="#B07A4A"><rect x="6" y="172" width="16" height="5" rx="2"/><rect x="46" y="172" width="16" height="5" rx="2"/><rect x="86" y="172" width="16" height="5" rx="2"/><rect x="126" y="172" width="16" height="5" rx="2"/><rect x="166" y="172" width="16" height="5" rx="2"/><rect x="206" y="172" width="16" height="5" rx="2"/><rect x="246" y="172" width="16" height="5" rx="2"/><rect x="286" y="172" width="16" height="5" rx="2"/></g>
+            <rect y="168" width="320" height="4" rx="2" fill="#5D5880"/>
+            <circle class="cv-smoke" cx="44" cy="76" r="8" fill="#fff"/>
+            <circle class="cv-smoke" cx="58" cy="60" r="11" fill="#fff" style="--dl:-1s"/>
+            <circle class="cv-smoke" cx="78" cy="44" r="14" fill="#fff" style="--dl:-2s"/>
+            <g class="cv-train">
+              <rect x="18" y="114" width="52" height="34" rx="10" fill="#FF6B6B"/>
+              <rect x="30" y="94" width="12" height="22" rx="3" fill="#2A2350"/>
+              <rect x="27" y="89" width="18" height="7" rx="3" fill="#2A2350"/>
+              <circle cx="14" cy="128" r="5" fill="#FFD23F"/>
+              <rect x="66" y="88" width="44" height="60" rx="8" fill="#FF6B6B"/>
+              <rect x="62" y="80" width="52" height="12" rx="6" fill="#E04848"/>
+              <rect x="75" y="98" width="26" height="20" rx="5" fill="#CFF3FF"/>
+              <rect x="110" y="134" width="12" height="5" rx="2" fill="#2A2350"/>
+              <rect x="120" y="104" width="54" height="44" rx="8" fill="#FFD23F"/>
+              <rect x="172" y="134" width="12" height="5" rx="2" fill="#2A2350"/>
+              <rect x="182" y="104" width="54" height="44" rx="8" fill="#2ED3A0"/>
+              <rect x="234" y="134" width="12" height="5" rx="2" fill="#2A2350"/>
+              <rect x="244" y="104" width="54" height="44" rx="8" fill="#9B5DE5"/>
+              <g font-family="Fredoka, sans-serif" font-weight="700" font-size="30" fill="#fff" text-anchor="middle">
+                <text x="147" y="137">1</text><text x="209" y="137">2</text><text x="271" y="137">3</text>
+              </g>
+            </g>
+            <g fill="#2A2350">
+              <g class="cv-wheel"><circle cx="36" cy="156" r="13"/><rect x="34.5" y="145" width="3" height="22" rx="1.5" fill="#5D5880"/><circle cx="36" cy="156" r="4" fill="#FFD23F"/></g>
+              <g class="cv-wheel"><circle cx="88" cy="156" r="13"/><rect x="86.5" y="145" width="3" height="22" rx="1.5" fill="#5D5880"/><circle cx="88" cy="156" r="4" fill="#FFD23F"/></g>
+              <g class="cv-wheel"><circle cx="134" cy="158" r="9"/><rect x="133" y="151" width="2" height="14" fill="#5D5880"/></g>
+              <g class="cv-wheel"><circle cx="160" cy="158" r="9"/><rect x="159" y="151" width="2" height="14" fill="#5D5880"/></g>
+              <g class="cv-wheel"><circle cx="196" cy="158" r="9"/><rect x="195" y="151" width="2" height="14" fill="#5D5880"/></g>
+              <g class="cv-wheel"><circle cx="222" cy="158" r="9"/><rect x="221" y="151" width="2" height="14" fill="#5D5880"/></g>
+              <g class="cv-wheel"><circle cx="258" cy="158" r="9"/><rect x="257" y="151" width="2" height="14" fill="#5D5880"/></g>
+              <g class="cv-wheel"><circle cx="284" cy="158" r="9"/><rect x="283" y="151" width="2" height="14" fill="#5D5880"/></g>
+            </g>
+          </svg>
+        </div>
+        <div class="game__body">
+          <div class="game__meta"><span class="age" data-i18n="g4.age">4–6 yaş</span></div>
+          <h3 data-i18n="g4.t">Sayı Treni</h3>
+          <p data-i18n="g4.p">Çuf çuf! Vagonları doğru sayılarla doldur, treni istasyona ulaştır.</p>
+          <ul class="tags"><li data-i18n="tag.numbers">Sayılar</li><li data-i18n="tag.count">Sayma</li></ul>
+          <span class="soon-note"><svg aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="g.soonNote">Çok yakında</span><span class="soon-note__stores" aria-label="App Store, Google Play"><svg aria-hidden="true"><use href="#i-apple"/></svg><svg aria-hidden="true"><use href="#i-play"/></svg></span></span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="wave wave--bottom" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40C200 72 400 72 600 44S1000 0 1200 24 1380 56 1440 48V80H0Z" fill="currentColor"/></svg></div>
+</section>
+
+<!-- ============ PLAYGROUND ============ -->
+<section class="section" id="oyun-alani">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow" style="--e-bg:#D3F2FF;--e-c:#1B8FCB" data-i18n="play.eyebrow">Oyun alanı</span>
+      <h2 class="h2" data-i18n="play.title">Hadi, bir tur oynayalım!</h2>
+      <p data-i18n="play.lead">Balonlara dokun, renkleri keşfet. Her balonun kendine ait bir notası var — KivuPlay oyunlarından minik bir tat.</p>
+    </header>
+
+    <div class="playground reveal" id="playground">
+      <span class="cloud" style="--y:12%;--w:150px;--t:70s;--dl:-20s;--x0:10vw" aria-hidden="true"></span>
+      <span class="cloud" style="--y:34%;--w:100px;--t:55s;--dl:-45s;--x0:60vw" aria-hidden="true"></span>
+
+      <div class="pg__hud">
+        <div class="score" aria-live="polite">
+          <span class="score__icon" aria-hidden="true"></span>
+          <span data-i18n="play.score">Balon</span>
+          <b id="score">0</b>
+        </div>
+        <button class="sound" id="soundToggle" type="button" aria-pressed="true" aria-label="Ses" data-i18n-label="play.sound">
+          <svg class="ico-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h3.5L12 5v14l-4.5-4H4z" fill="#2A2350" stroke="#2A2350" stroke-width="1.5" stroke-linejoin="round"/><path d="M15.5 9a4.5 4.5 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11" fill="none" stroke="#2A2350" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <svg class="ico-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h3.5L12 5v14l-4.5-4H4z" fill="#2A2350" stroke="#2A2350" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="#FF6B6B" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="pg__hint" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#fff" opacity=".35"/><circle cx="24" cy="24" r="11" fill="#fff"/></svg>
+        <span data-i18n="play.hint">Balonlara dokun!</span>
+      </div>
+
+      <p class="pg__cheer" aria-live="assertive"></p>
+
+      <svg class="pg__grass" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 40Q150 10 300 36T600 34 900 30 1200 38V90H0Z" fill="#8FE3B8"/>
+        <path d="M0 62Q200 44 400 60T800 58 1200 56V90H0Z" fill="#6FD39C"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section" id="beceriler" style="padding-top:20px">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow" style="--e-bg:#FFF0C7;--e-c:#B97F00" data-i18n="skills.eyebrow">Neler öğreniyoruz?</span>
+      <h2 class="h2" data-i18n="skills.title">Her oyunda yeni bir beceri</h2>
+      <p data-i18n="skills.lead">Erken çocukluk gelişimini destekleyen alanlarda, oyunun doğal akışı içinde öğreniyoruz.</p>
+    </header>
+
+    <ul class="skills" data-stagger>
+      <li class="skill reveal" style="--c:#FF6B6B;--i:0">
+        <span class="skill__bubble"><svg viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M24 5C13.5 5 5 13 5 23.5S13 42 22 42c2.6 0 4-1.6 4-3.6 0-1.2-.6-2-1.1-2.8-.6-.9-.4-2.6 1.6-2.6H31c6.6 0 12-4.6 12-11.2C43 12.6 34.5 5 24 5Z" fill="#fff"/>
+          <circle cx="14" cy="22" r="3.8" fill="#FFC93C"/><circle cx="20" cy="13.5" r="3.8" fill="#2ED3A0"/><circle cx="30" cy="12.5" r="3.8" fill="#3AB8F5"/><circle cx="36" cy="20.5" r="3.8" fill="#9B5DE5"/>
+        </svg></span>
+        <b data-i18n="sk.colors">Renkler</b>
+      </li>
+      <li class="skill reveal" style="--c:#FFB020;--i:1">
+        <span class="skill__bubble"><svg viewBox="0 0 48 48" aria-hidden="true" fill="#fff">
+          <circle cx="14" cy="14" r="9"/><path d="M34 5L44 22H24Z" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="5" y="27" width="17" height="17" rx="4"/><rect x="28" y="28" width="14" height="14" rx="3" transform="rotate(45 35 35)"/>
+        </svg></span>
+        <b data-i18n="sk.shapes">Şekiller</b>
+      </li>
+      <li class="skill reveal" style="--c:#2ED3A0;--i:2">
+        <span class="skill__bubble"><svg viewBox="0 0 48 48" aria-hidden="true"><text x="24" y="32" fill="#fff" font-family="Fredoka, sans-serif" font-weight="700" font-size="21" text-anchor="middle">123</text></svg></span>
+        <b data-i18n="sk.numbers">Sayılar</b>
+      </li>
+      <li class="skill reveal" style="--c:#3AB8F5;--i:3">
+        <span class="skill__bubble"><svg viewBox="0 0 48 48" aria-hidden="true"><text x="24" y="32" fill="#fff" font-family="Fredoka, sans-serif" font-weight="700" font-size="21" text-anchor="middle">Abc</text></svg></span>
+        <b data-i18n="sk.letters">Harfler</b>
+      </li>
+      <li class="skill reveal" style="--c:#9B5DE5;--i:4">
+        <span class="skill__bubble"><svg viewBox="0 0 48 48" aria-hidden="true" fill="#fff">
+          <rect x="17" y="10" width="4.5" height="25" rx="2"/><rect x="35" y="6" width="4.5" height="25" rx="2"/><path d="M17 9L39.5 5V12.5L17 16.5Z"/>
+          <ellipse cx="14" cy="35" rx="7.5" ry="5.8" transform="rotate(-20 14 35)"/><ellipse cx="32" cy="31" rx="7.5" ry="5.8" transform="rotate(-20 32 31)"/>
+        </svg></span>
+        <b data-i18n="sk.music">Müzik</b>
+      </li>
+      <li class="skill reveal" style="--c:#F15BB5;--i:5">
+        <span class="skill__bubble"><svg viewBox="0 0 48 48" aria-hidden="true" fill="#fff">
+          <ellipse cx="24" cy="32" rx="11" ry="9.5"/><ellipse cx="11" cy="21" rx="4.6" ry="5.6" transform="rotate(-20 11 21)"/><ellipse cx="18.5" cy="12" rx="4.6" ry="5.8"/><ellipse cx="29.5" cy="12" rx="4.6" ry="5.8"/><ellipse cx="37" cy="21" rx="4.6" ry="5.6" transform="rotate(20 37 21)"/>
+        </svg></span>
+        <b data-i18n="sk.animals">Hayvanlar</b>
+      </li>
+      <li class="skill reveal" style="--c:#4D7CFE;--i:6">
+        <span class="skill__bubble"><svg viewBox="0 0 48 48" aria-hidden="true" fill="#fff">
+          <rect x="7" y="15" width="27" height="27" rx="5"/><circle cx="20.5" cy="13" r="6"/><circle cx="36" cy="28.5" r="6"/><circle class="accent" cx="20.5" cy="42" r="5"/>
+        </svg></span>
+        <b data-i18n="sk.puzzles">Bulmacalar</b>
+      </li>
+      <li class="skill reveal" style="--c:#FF9F1C;--i:7">
+        <span class="skill__bubble"><svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="5" y="10" width="20" height="28" rx="5" fill="#fff" opacity=".65" transform="rotate(-12 15 24)"/>
+          <rect x="22" y="10" width="20" height="28" rx="5" fill="#fff" transform="rotate(10 32 24)"/>
+          <path class="accent" transform="translate(25 17) scale(.6)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/>
+        </svg></span>
+        <b data-i18n="sk.memory">Hafıza</b>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PARENTS ============ -->
+<section class="section band band--mint" id="ebeveynler">
+  <div class="wave wave--top" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 30C240 70 480 74 720 46S1200 6 1440 36V80H0Z" fill="currentColor"/></svg></div>
+
+  <div class="wrap parents">
+    <div class="phone-wrap reveal">
+      <svg class="deco-star" style="top:6%;left:10%;--c:#FFC93C;--s:34px" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="deco-star" style="top:20%;right:8%;--c:#9B5DE5;--s:22px;--dl:1s" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="deco-star" style="bottom:12%;left:6%;--c:#FF6B6B;--s:26px;--dl:2s" aria-hidden="true"><use href="#i-spark"/></svg>
+
+      <div class="phone">
+        <span class="phone__notch" aria-hidden="true"></span>
+        <div class="phone__screen">
+          <div class="gate" id="gate">
+            <div class="gate__lock" aria-hidden="true">
+              <svg class="ico-closed" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="11" rx="3.5" fill="#fff"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="#fff" stroke-width="2.6"/></svg>
+              <svg class="ico-open" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="11" rx="3.5" fill="#fff"/><path d="M8 10.5V8a4 4 0 0 1 7.8-1.3" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+            </div>
+            <p class="gate__title" data-i18n="gate.title">Ebeveyn kapısı</p>
+            <p class="gate__q" data-i18n="gate.q">Devam etmek için soruyu yanıtlayın</p>
+            <p class="gate__sum"><span id="gateA">4</span> + <span id="gateB">3</span> = ?</p>
+            <div class="gate__opts">
+              <button type="button">5</button>
+              <button type="button" data-ok="1">7</button>
+              <button type="button">9</button>
+            </div>
+            <p class="gate__msg" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+      <p class="phone-tip" data-i18n="gate.tip">Deneyin! Doğru cevaba dokunun 👆</p>
+    </div>
+
+    <div>
+      <header class="sec-head sec-head--left reveal">
+        <span class="eyebrow" style="--e-bg:#C8F3E1;--e-c:#0F8C66" data-i18n="parents.eyebrow">Ebeveynler için</span>
+        <h2 class="h2" data-i18n="parents.title">Sizin içiniz rahat, onlar mutlu</h2>
+        <p data-i18n="parents.lead">Her oyunu tasarlarken kendimize aynı soruyu soruyoruz: Bunu kendi çocuğumuza gönül rahatlığıyla oynatır mıydık?</p>
+      </header>
+
+      <ul class="promises" data-stagger>
+        <li class="promise reveal" style="--c:#9B5DE5">
+          <span class="promise__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="11" rx="3.5" fill="currentColor"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2.6"/></svg></span>
+          <h3 data-i18n="p1.t">Ebeveyn kapısı</h3>
+          <p data-i18n="p1.p">Satın almalar, ayarlar ve dış bağlantılar yalnızca yetişkin doğrulamasıyla açılır.</p>
+        </li>
+        <li class="promise reveal" style="--c:#FF6B6B">
+          <span class="promise__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z" fill="currentColor"/><path d="M8.5 12l2.4 2.4L15.5 9.8" fill="none" stroke="#FF6B6B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 data-i18n="p2.t">Gizliliğe saygı</h3>
+          <p data-i18n="p2.p">Çocuklardan kişisel bilgi istemiyor, gizliliği tasarımın tam merkezine koyuyoruz.</p>
+        </li>
+        <li class="promise reveal" style="--c:#FFB020">
+          <span class="promise__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12.5" r="8.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M12 8v4.8l3 2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 2h5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+          <h3 data-i18n="p3.t">Dengeli ekran süresi</h3>
+          <p data-i18n="p3.p">Kısa ve tamamlanabilir bölümler sayesinde mola vermek her zaman kolay.</p>
+        </li>
+        <li class="promise reveal" style="--c:#3AB8F5">
+          <span class="promise__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 15.5L13.5 11V5.5a1.5 1.5 0 0 0-3 0V11L3 15.5V17.5l7.5-2.3V19l-2 1.5V22l3.5-1 3.5 1v-1.5l-2-1.5v-3.8l7.5 2.3z"/></svg></span>
+          <h3 data-i18n="p4.t">İnternetsiz de oynanır</h3>
+          <p data-i18n="p4.p">Yolda, uçakta ya da bekleme salonunda; oyunlarımız her yerde yanınızda.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wave wave--bottom" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 50C200 20 420 14 640 40S1080 76 1300 50 1420 30 1440 34V80H0Z" fill="currentColor"/></svg></div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="destek">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow" style="--e-bg:#FFE0EF;--e-c:#C93D8F" data-i18n="faq.eyebrow">Destek</span>
+      <h2 class="h2" data-i18n="faq.title">Sıkça sorulan sorular</h2>
+      <p data-i18n="faq.lead">Aklınıza takılan bir şey mi var? En çok merak edilenleri burada topladık.</p>
+    </header>
+
+    <div class="faq" data-stagger>
+      <details class="reveal" style="--c:#FF6B6B" name="faq" open>
+        <summary><span data-i18n="faq.q1">Oyunlarınız hangi yaş grubu için uygun?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a" data-i18n="faq.a1">Oyunlarımız ağırlıklı olarak 2–6 yaş arası okul öncesi çocuklar için tasarlanıyor. Oyunlar yayınlandığında, her birinin mağaza sayfasında önerilen yaş aralığı yer alacak.</div>
+      </details>
+      <details class="reveal" style="--c:#FFB020" name="faq">
+        <summary><span data-i18n="faq.q2">Oyunlarınız ne zaman çıkacak?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a" data-i18n="faq.a2">Oyunlarımızın son rötuşlarını yapıyoruz; çok yakında App Store ve Google Play'de olacaklar. Çıktıkları gün haberdar olmak isterseniz bize <a href="mailto:contact@kivuplay.com">contact@kivuplay.com</a> adresinden yazmanız yeterli.</div>
+      </details>
+      <details class="reveal" style="--c:#2ED3A0" name="faq">
+        <summary><span data-i18n="faq.q3">Çocuğumun gizliliğini nasıl koruyorsunuz?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a" data-i18n="faq.a3">Çocuklardan kişisel bilgi talep etmiyoruz ve gizliliği her oyunun temeline koyuyoruz. Ayrıntılar için <a href="privacy.html">Gizlilik Politikamızı</a> inceleyebilirsiniz.</div>
+      </details>
+      <details class="reveal" style="--c:#3AB8F5" name="faq">
+        <summary><span data-i18n="faq.q4">Hangi cihazlarda oynayabiliriz?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a" data-i18n="faq.a4">Oyunlarımız iPhone, iPad ve Android telefon ile tabletler için geliştiriliyor. Desteklenen sürümler her oyunun mağaza sayfasında yer alacak.</div>
+      </details>
+      <details class="reveal" style="--c:#9B5DE5" name="faq">
+        <summary><span data-i18n="faq.q5">Bir sorun yaşarsam size nasıl ulaşabilirim?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a" data-i18n="faq.a5">Bize <a href="mailto:contact@kivuplay.com">contact@kivuplay.com</a> adresinden yazabilirsiniz. Her mesajı okuyoruz; geri bildirimleriniz oyunlarımızı daha da güzelleştiriyor!</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA + CONTACT ============ -->
+<section class="cta" id="indir">
+  <div class="wrap">
+    <div class="cta__panel reveal">
+      <span class="cta__bubble" style="width:220px;height:220px;top:-80px;left:-60px" aria-hidden="true"></span>
+      <span class="cta__bubble" style="width:120px;height:120px;top:30px;right:12%" aria-hidden="true"></span>
+      <span class="cta__bubble" style="width:300px;height:300px;bottom:-180px;left:30%" aria-hidden="true"></span>
+      <svg class="twinkle" style="top:16%;left:12%;--s:24px;--c:#FFE58A" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="twinkle" style="top:24%;right:22%;--s:18px;--c:#fff;--dl:.6s" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="twinkle" style="bottom:26%;left:20%;--s:16px;--c:#FFB3DA;--dl:1.2s" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="cta__kivu" aria-hidden="true"><use href="#kivu-static"/></svg>
+      <svg class="cta__kivu cta__kivu--l" aria-hidden="true"><use href="#logo-mark"/></svg>
+
+      <h2 class="h2" data-i18n="cta.title">Macera çok yakında başlıyor!</h2>
+      <p data-i18n="cta.lead">Oyunlarımız çok yakında App Store ve Google Play'de. Çıktıkları gün ilk siz haberdar olmak ister misiniz?</p>
+      <div class="stores">
+        <span class="btn store store--light store--soon">
+          <svg aria-hidden="true"><use href="#i-apple"/></svg>
+          <span><small data-i18n="store.soon">Çok yakında</small><strong>App Store</strong></span>
+          <svg class="store__spark" aria-hidden="true"><use href="#i-spark"/></svg>
+        </span>
+        <span class="btn store store--light store--soon">
+          <svg aria-hidden="true"><use href="#i-play"/></svg>
+          <span><small data-i18n="store.soon">Çok yakında</small><strong>Google Play</strong></span>
+          <svg class="store__spark" aria-hidden="true"><use href="#i-spark"/></svg>
+        </span>
+      </div>
+      <a class="btn btn--sun notify" href="mailto:contact@kivuplay.com?subject=KivuPlay">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0-6 6v3.6L4.3 15.4A1 1 0 0 0 5.2 17h13.6a1 1 0 0 0 .9-1.6L18 12.6V9a6 6 0 0 0-6-6zM9.5 19a2.5 2.5 0 0 0 5 0z" fill="currentColor"/></svg>
+        <span data-i18n="cta.notify">Çıkınca bana haber verin</span>
+      </a>
+    </div>
+
+    <div class="contact" id="iletisim" data-stagger>
+      <a class="tile reveal" href="mailto:contact@kivuplay.com" style="--c:#FF6B6B">
+        <span class="tile__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3.5" fill="currentColor"/><path d="M6 8.5l6 4.5 6-4.5" fill="none" stroke="#FF6B6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span><b data-i18n="ct.t1">Bize yazın</b><span>contact@kivuplay.com</span></span>
+      </a>
+      <a class="tile reveal" href="#destek" style="--c:#FFB020">
+        <span class="tile__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5A3.5 3.5 0 0 1 7.5 3h9A3.5 3.5 0 0 1 20 6.5v7a3.5 3.5 0 0 1-3.5 3.5H11l-4.5 4v-4A3.5 3.5 0 0 1 4 13.5z" fill="currentColor"/><path d="M10 8.2a2 2 0 1 1 2.6 1.9c-.4.2-.6.5-.6.9v.4" fill="none" stroke="#FFB020" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="13.6" r="1.1" fill="#FFB020"/></svg></span>
+        <span><b data-i18n="ct.t2">Sıkça sorulanlar</b><span data-i18n="ct.s2">Hızlı yanıtlar burada</span></span>
+      </a>
+      <a class="tile reveal" href="privacy.html" style="--c:#2ED3A0">
+        <span class="tile__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z" fill="currentColor"/><path d="M8.5 12l2.4 2.4L15.5 9.8" fill="none" stroke="#2ED3A0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span><b data-i18n="ct.t3">Gizlilik politikası</b><span data-i18n="ct.s3">Çocuğunuzun gizliliğini nasıl koruyoruz</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER (night) ============ -->
+<footer class="footer">
+  <svg class="footer__hills" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70C160 20 320 18 480 54S760 110 940 70 1260 10 1440 50V130H0Z" fill="#4B4185"/>
+    <path d="M0 96C200 56 380 50 560 80S900 120 1100 88 1360 64 1440 76V130H0Z" fill="currentColor"/>
+  </svg>
+
+  <div class="footer__sky" aria-hidden="true">
+    <svg class="moon" viewBox="0 0 64 64"><path fill="currentColor" d="M40 6a26 26 0 1 0 18 40A22 22 0 0 1 40 6z"/></svg>
+    <svg class="twinkle" style="top:130px;left:30%;--s:14px"><use href="#i-spark"/></svg>
+    <svg class="twinkle" style="top:170px;left:62%;--s:18px;--dl:1s"><use href="#i-spark"/></svg>
+    <svg class="twinkle" style="top:260px;left:86%;--s:12px;--dl:.5s"><use href="#i-spark"/></svg>
+    <svg class="twinkle" style="top:300px;left:48%;--s:10px;--dl:1.6s"><use href="#i-spark"/></svg>
+    <svg class="twinkle" style="top:220px;left:18%;--s:12px;--dl:2.1s"><use href="#i-spark"/></svg>
+  </div>
+
+  <div class="wrap" style="position:relative">
+    <div class="sleepy" aria-hidden="true">
+      <svg viewBox="0 0 400 400"><use href="#kivu-sleep"/></svg>
+      <div class="zzz"><span>z</span><span>z</span><span>Z</span></div>
+    </div>
+    <p class="night-note" data-i18n="footer.night">İyi geceler, minikler!</p>
+
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="#top" aria-label="KivuPlay">
+          <svg class="logo__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+          <span class="logo__word"><b>kivu</b><i>play</i></span>
+        </a>
+        <p class="footer__tagline" data-i18n="footer.tagline">Okul öncesi çocuklar için güvenli, neşeli ve öğretici oyunlar.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.explore">Keşfet</h4>
+        <nav class="footer__links" aria-label="Alt menü">
+          <a href="#oyunlar" data-i18n="nav.games">Oyunlar</a>
+          <a href="#ebeveynler" data-i18n="nav.parents">Ebeveynler</a>
+          <a href="#destek" data-i18n="nav.support">Destek</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
+        </nav>
+      </div>
+      <div>
+        <h4 data-i18n="footer.get">Çok yakında</h4>
+        <div class="footer__stores">
+          <span class="mini-store mini-store--soon"><svg aria-hidden="true"><use href="#i-apple"/></svg>App Store</span>
+          <span class="mini-store mini-store--soon"><svg aria-hidden="true"><use href="#i-play"/></svg>Google Play</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p data-i18n="footer.copy">© <span data-year>2026</span> KivuPlay. Tüm hakları saklıdır.</p>
+      <p data-i18n="footer.love">Minikler için <span class="heart">♥</span> ile yapıldı</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
